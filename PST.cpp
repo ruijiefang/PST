@@ -482,6 +482,7 @@ int main(int argc, char **argv)
       V->Out.push_back(Neighbor);
     }
     G.Vertices[V->ID] = V;
+    cout<< "Created vertex " << V->ID << "\n";
   }
 
   G.Print();
