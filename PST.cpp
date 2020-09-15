@@ -484,8 +484,11 @@ int main(int argc, char **argv)
     G.Vertices[V->ID] = V;
     cout<< "Created vertex " << V->ID << "\n";
   }
-
   G.Print();
+  cout<<"starting calculation...\n";
+  vector< set<Vertex*> > Classes = calculateCanonicalSESERegions(G);
+  cout<<"finished calculation.\n";
+  cout<<"number of equivalences:"<<Classes.size()<<"\n";
   return 0;
 }
 
